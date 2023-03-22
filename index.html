@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>New Tab</title>
+    <html manifest="manifest.json">
+    <style>
+        body {
+            overflow: hidden; 
+            background-color: black;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100vw;
+            height: 100vh;
+            color: white;
+        }
+
+        #search-form {
+            position: fixed;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, 0);
+            color: white;
+        }
+
+        #search-input {
+            font-size: 20px;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            width: 75vh;
+            background-color: transparent;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-bottom: 2px solid white;
+            outline: none;
+            color: white;
+        }
+
+        #quote {
+            color: white;
+            font-size: 30px;
+            text-align: center;
+            position: absolute;
+            left: 50%;
+            padding-top: 5%;
+            transform: translateX(-50%);
+            width: 70%;
+        }
+
+        .overlay::before {
+            content: "";
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        ::placeholder { 
+            color: white;   
+        }
+    </style>
+</head>
+
+<body>
+    <form id="search-form" action="https://www.google.com/search" method="GET">
+        <input type="text" id="search-input" name="q" autocomplete="off" placeholder="Search...">
+        <div id="quote"></div>
+    </form>
+    <script src="background.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+{
+  "name": "Project Happy",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "Inspires you with every new tab; a new quote and image to lighten your day",
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "permissions": [
+    "storage", 
+    "tabs"
+  ],
+  "browser_action": {
+    "default_title": "Project Happy"
+  }, 
+  "icons": {
+    "16": "images/icon16.jpg"
+  }
+}
