@@ -1,4 +1,3 @@
-// Array to cache previously loaded images
 const loadedImages = [];
 
 fetch("https://api.quotable.io/random")
